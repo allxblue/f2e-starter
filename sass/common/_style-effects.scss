@@ -1,0 +1,116 @@
+/** ___  style-effects  ____________________________________________
+ * 
+ *    此為已定義完成的樣式，同一網站請從這取用樣式
+ *    還沒拆開base.css前都是限制區域
+ * ___________________________________________________________ */
+ 
+.clearfix:after{
+  content:"";
+  clear:both;
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.paused {
+  -webkit-animation-play-state: paused;
+     -moz-animation-play-state: paused;
+       -o-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.poa{
+  position: absolute;
+}
+
+.por{
+  position: relative;
+}
+
+
+
+
+/* ------ 陰影 ------ */
+/*參數：x軸、y軸、柔化、(距離)、顏色*/
+// .sd{
+//   -webkit-box-shadow: 0px 2px 3px #F2F2F2 inset;
+//      -moz-box-shadow: 0px 2px 3px #F2F2F2 inset;
+//           box-shadow: 0px 2px 3px #F2F2F2 inset;
+// }
+
+// .text_shadow{
+//   text-shadow: 0px 1px 1px #fff;
+// }
+
+/* ------ 圓角 ------ */
+// .cc{
+//   border: 1px solid #ccc;
+//   border-top-right-radius:5px;
+//   -webkit-border-radius: 2px;
+//       -moz-border-radius:2px;
+//            border-radius:2px;
+// }
+
+/* ------ 透明 ------ */
+// .ap{
+//   filter: alpha(opacity=80);
+//          -moz-opacity:0.8;
+//               opacity:0.8;
+// }
+
+/* ------ 漸變 ------ */
+.trs{
+-webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+     -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+}
+
+
+/* ------ 小三角形 ------ */
+// .arrow:after{
+//   content: "";
+//   border-left:  4px solid transparent;
+//   border-right: 4px solid transparent;
+//   border-top:   4px solid #000;
+//   width: 0px;
+//   height: 0px;
+// }
+
+/* ------ 不換行 ------ */
+.nowrap{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space : nowrap;
+}
+
+@mixin vam-parent{
+  
+  &:after{
+    content: "";
+    margin-left: -0.25em; 
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 0px;
+  }
+
+}
+
+@mixin scale($scale:1){
+    -moz-transform:     scale($scale);
+     -o-transform:      scale($scale);
+     -webkit-transform: scale($scale);
+     transform:         scale($scale);
+     -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=" + $scale + ", M12=0, M21=0, M22=" + $scale ", SizingMethod='auto expand')";
+        
+}

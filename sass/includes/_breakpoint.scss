@@ -1,0 +1,29 @@
+/** ___  breakpoint 中斷點規則放這  ____________________________________________
+ * 
+ *    統一從這取斷點，此樣式為優雅降級
+ * ___________________________________________________________ */
+
+/*		
+					s-mob  m-mob   mob  tablet  desktop
+			<____320____480____720____800____1170____>
+
+				 _________________________900_1020____
+					額外斷點								bp2  bp1
+*/
+
+$rwd-desktop: 					"only screen and (min-width: 1180px)";
+$rwd-below-maxDesktop: 	"only screen and (max-width: 1170px)";
+$rwd-desktop-bp-1: 			"only screen and (max-width: 1020px)";
+$rwd-desktop-bp-2: 			"only screen and (max-width: 900px)";
+$rwd-tablet: 						"only screen and (min-width: 800px) and (max-width: 1169px)";
+$rwd-below-tablet: 			"only screen and (max-width: 801px)";
+$rwd-below-maxTablet:		"only screen and (max-width: 1169px)";
+
+$rwd-below-maxMobile: 	"only screen and (max-width: 720px)";
+$rwd-mobile: 						"only screen and (min-width: 321px) and (max-width: 720px)";
+$rwd-m-mobile: 					"only screen and (max-width: 480px)";
+$rwd-s-mobile: 					"only screen and (max-width: 320px)";
+
+@media #{$rwd-desktop} {
+
+}

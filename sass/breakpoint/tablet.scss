@@ -1,0 +1,24 @@
+/** ___  RWD Tablet  ____________________________________________ **/
+
+
+@media #{$rwd-below-maxTablet} { /* < 1169 */
+
+}
+
+// 低解析螢幕，當平板處理
+@media #{$rwd-below-maxDesktop} { /* < 1170 */
+
+}
+
+@media #{$rwd-desktop-bp-1} { /* 1020 */
+	
+}
+
+@media #{$rwd-desktop-bp-2} { /* 900 */
+	
+}
+
+// 這邊算是過渡到手機版的樣式
+@media #{$rwd-below-tablet} { /* < 801 */
+
+}

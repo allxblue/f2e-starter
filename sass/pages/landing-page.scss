@@ -1,0 +1,427 @@
+/** ___  Where to buy  ____________________________________________
+ * 
+ *    Where to buy
+ * ___________________________________________________________ */
+
+$base-color: #00a8ff;
+body{
+
+}
+
+#product-wheretobuy-area{
+	
+	.online-retailers{
+		.list{
+			width: 100%;
+		}
+	}
+
+	.product-item{
+		border-bottom:1px solid #CDCDCD;
+		
+	
+
+		&.title{
+			border-top: 1px solid #CDCDCD;
+			background: #EEE;
+			
+			> th{
+				height: 45px; 
+				vertical-align: middle;
+				text-align: left;
+				padding: 0 1em;
+				
+			}
+
+			.pn{
+				font-weight: bolder;
+			}
+
+			.name + .spec:before{
+				content: attr(data-spec);
+				font-weight: bolder; 
+				padding-right: 1em; 
+			}
+
+
+		}
+	
+		.name{
+			font-weight: 500;
+			border-right: 1px solid #CDCDCD;
+		}
+	
+		&:hover{
+			background: #FAFAFA;
+		}
+
+		> td{
+			padding: 1em 1em;
+		}
+
+		.action{
+			position: relative;
+			vertical-align: middle;
+		}
+
+		.wtb-buy-btn{
+			display: inline-block;
+			padding: .5em 1.5em;
+			background: #00A8FF;
+			color: #fff; 
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 14px; 
+			
+			&:hover{
+				background: #0090D9; 
+			}  
+		}
+	}
+
+	h3{
+		color: #000; 
+		font-size: 20px;
+	}
+
+	h3 + p{
+		font-size: 14px; 
+		margin-bottom: 1em; 
+	}
+
+	.product-info{
+		position: relative;
+		width: 60%;
+		min-height: 260px; 
+		padding-left: 300px;
+		padding-bottom: 60px; 
+		
+		.product-name{
+			font-size: 24px;
+			line-height: 1.2;
+			margin-bottom: .5em;  
+		}
+
+		.product-img{
+			position: absolute;
+			left: 0;
+			top: 0;
+			max-width: 260px; 
+		}
+
+		.spec{
+			font-size: 14px;
+			color: #444;
+			li{
+				list-style: initial; 
+				margin-left: -.6em;  // 對齊左側
+			}
+		}
+
+	
+		.btn-group{
+			.btn{
+				color:$base-color;
+				border:0px;
+				background: none;
+				font-size: 14px; 
+			}
+			.btn + .btn{
+				margin-left: 1em; 
+			}
+		}
+	}
+
+	/* 供應商列表 */
+	.retailers-list{
+		position: absolute;
+		left: -450px;
+		top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+		background: #FFF;
+		min-width: 425px;
+		border-radius: 1px; 
+		border: 1px solid #CDCDCD;
+		
+		&:before,
+		&:after{
+			content: "";
+	    display: block;
+	    position: absolute;
+	    right: -11px;
+	    top:50%;
+	    margin-top: -10px; 
+	    border-left: 10px solid #CDCDCD;
+	    border-top: 10px solid transparent;
+	    border-bottom: 10px solid transparent;
+	    margin-left: 1px;
+	    z-index: 1;
+		}
+
+		&:after{
+			right: -10px; 
+	    border-left: 10px solid #fff;
+    	border-top: 10px solid transparent;
+    	border-bottom: 10px solid transparent;
+		}
+		
+		> li{
+			padding: 0px 5px;
+		 	box-sizing: border-box; 
+		 	
+		 	&:hover{
+		 		background: #eee; 
+		 		position: relative;
+		 	}
+		 	
+		 	&:last-child{
+		 		.retailer-info{
+					border-bottom: 0px; 
+		 		}
+		 	}
+		}
+		.retailer-info{
+			display: block;
+			height: 55px;
+			border-bottom: 1px solid #efefef;
+			line-height: 55px; 
+			&:hover{
+				background: none;
+			}
+
+			> span{
+				display: inline-block;
+				line-height: 1.5;
+				text-align: center;
+				
+			}
+
+			.retailer-logo{
+				width: 150px; 
+				text-align: center;
+			}
+
+			.retailer-name{
+				display: none;
+			}
+			
+			.retailer-status{
+				width: 80px; 
+				color: #706F6F;
+			}
+			
+			.retailer-price{
+				width: 85px; 
+				font-size: 12px;
+				text-transform: uppercase;
+				color: #000; 
+			}
+
+			.link{
+				min-width: 105px;
+			}
+
+		}
+
+	}
+
+}
+
+@media only screen and (max-width: 800px) { 
+	#product-wheretobuy-area{	
+		background: #E6E6E6;
+    font-size: 2vw; 
+		
+		
+		.product-info{
+			width: 100%;
+			background: #FFF;
+      box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, .3);
+			margin-bottom: 2em; 
+			padding-left: 0; 
+			padding-bottom: 5em; 
+			min-height: initial; 
+			
+			.product-name{
+				float: right;
+				max-width: 60%; 
+				padding-top: 1em; 
+				font-size: 2.5em; 
+			}
+
+			.spec{
+				display: none;
+			}
+			
+			.product-img{
+				position: static;
+				float: left;
+				left: 1%;
+				top: 0;
+				max-width:37%;
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+
+			.btn-group{
+				clear: both;
+				text-align: center;
+				
+				.btn{
+					font-size: 3vw; 
+					border: 1px solid #00a8ff;
+					padding: .8em 2em; 
+				}
+
+				.btn + .btn{
+					margin-left: 2em; 
+				}
+			}
+		}
+
+		.product-item{
+			display: block;
+			width: 96%;
+			margin: 0 auto; 
+			color: #000; 
+			background: #fff; 
+			padding: 5%; 
+      box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, .3);
+      border-radius: 2px; 
+      border:0px;
+      box-sizing: border-box;
+      font-size: 2vw; 
+			
+			&:hover{
+				background: #fff;
+			}
+			/* 標題區 */
+			&.title{
+				display: none;
+			}
+
+			> td{
+				display: block;
+				padding: 0; 
+			}
+
+			.name,
+			.pn{
+				width: 100%;
+				text-align: center;
+				font-size: 2em;
+				width: 100%;
+				text-align: center;
+				line-height: 1.5; 
+				margin-bottom: 2em; 
+			}
+
+			.spec{
+				margin-bottom: 1.5em;
+				font-size: 1.5em;
+				line-height: 1.2; 
+				
+				&:before{
+					content:attr(data-specname) " / ";
+					display: block;
+				}
+			}
+
+			.action{
+				width: 100%;
+				text-align: center;
+				margin-top: 3em; 
+			}
+
+
+			& + .product-item{
+				margin-top: 4%; 
+			}
+
+			.wtb-buy-btn{
+				font-size: 1.5em;
+				padding: .8em 2.5em; 
+			}
+
+		}
+
+		h3{
+			color: #000; 
+			font-size: 20px;
+			padding-left: 6.5%; 
+		}
+
+		h3 + p{
+			font-size: 1.5em; 
+			margin-bottom: 1em; 
+			padding-left: 6.5%;
+		}
+
+		.retailers-list{
+			margin: 7px 0 0;
+			min-width: 320px; 
+			left: 50%;
+			right:0;
+			top:100%;
+    	transform: translateY(0);
+			transform: translateX(-50%);  
+			-webkit-transform: translateX(-50%);  
+			
+			&:before,
+			&:after{
+				right:50%;
+				margin-left: -7px; 
+				top:-5px;
+				transform: rotate(-90deg);
+			}
+
+			&:before{
+				top:-6px;
+			}
+
+			.retailer-info{
+
+				.retailer-logo{
+					width: 30%; 
+					text-align: center;
+				}
+
+				.retailer-name{
+				}
+				
+				.retailer-status{
+					width: 24%; 
+				}
+				
+				.retailer-price{
+					width: 72px;
+				}
+
+				.link{
+					min-width: 10%; 
+				}
+			
+			}
+
+
+		}
+
+
+		
+
+	}
+	/* overwrite */
+	#main-zone{
+		padding: 0 !important; 
+
+		.container{
+			max-width: 100%;
+			width: 100%;
+			padding: 0; 
+		}
+		
+	}
+}

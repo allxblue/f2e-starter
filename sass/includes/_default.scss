@@ -1,0 +1,30 @@
+/** ___  Default Reset  ____________________________________________
+ * 
+ *    此為一般頁面初始值設定
+ * ___________________________________________________________ */
+
+
+/* ------ 字型 ------ */
+body, input, a{
+  font-family: "Segoe UI", "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", Meiryo, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+
+
+a:link{
+	color: $base-color; 
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:visited{
+	text-decoration: none;
+}
+
+a:hover{
+	color: $base-hover-color;
+}
+
+strong{
+	font-weight: bold;
+}
+
