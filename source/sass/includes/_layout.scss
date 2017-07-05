@@ -15,13 +15,11 @@
   
 }
 
-
-@media #{$rwd-below-maxDesktop} {
+@include media(">=mPhone"){
   .inner{
     width: 100%;
   } 
 }
-
 
 /* -------------- Grid ------------- */
 /*

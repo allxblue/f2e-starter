@@ -9,6 +9,10 @@ body, input, a{
   font-family: "Segoe UI", "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", Meiryo, "微軟正黑體", "Microsoft JhengHei", sans-serif;
 }
 
+li, a, img, button, input, select{
+  outline: none;
+}
+
 
 a:link{
 	color: $base-color; 
@@ -26,5 +30,24 @@ a:hover{
 
 strong{
 	font-weight: bold;
+}
+
+section, div, main, body{ 
+  &::-webkit-scrollbar-track
+  {
+    background-color: rgba(0, 0, 0, .2);
+  }
+
+  &::-webkit-scrollbar
+  {
+    width: 4px;
+    background-color: rgba(0, 0, 0, .2);
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, .8);
+  }
 }
 

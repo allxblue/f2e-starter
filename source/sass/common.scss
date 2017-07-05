@@ -1,12 +1,15 @@
 // ------ Variable & Setting ------
-@import "includes/mixin";
 @import "includes/variable";
-@import "includes/reset";
 @import "includes/breakpoint";
+
+
+// ------ Default ------
+@import "includes/reset";
 @import "includes/default";
 
 
 // ------ Effect  ------
+@import "common/mixin";
 @import "common/fonts";
 @import "common/style-effects";
 
