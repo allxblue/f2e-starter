@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "move": "cp -R node_modules ./public/vendor && rm -rf node_modules",
-    "slate": "rm -rf node_modules && yarn install",
+    "slate": "rm -rf node_modules/ && yarn install",
     "fake": "json-server --watch api.js --port 3120"
   },
   "repository": {
